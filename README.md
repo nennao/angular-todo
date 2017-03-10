@@ -20,10 +20,10 @@ This app uses JSON Web Tokens to authenticate users and keep them logged in. ALl
 ### Existing Features
 - User Based Feautures
 	- Registration
+	- Login
 
 ### Features Left to Implement
 - User Based Feautures
-	- Login
 	- Logout
 - Todo Based Feautures
 	- Creating todo items
