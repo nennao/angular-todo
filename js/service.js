@@ -8,3 +8,28 @@ angular.module("UserService", [])
 		};
 		return UserAPIService;
 	});
+
+
+angular.module("TodoService", [])
+	.factory("TodoAPIService", function($http) {
+
+		TodoAPIService = {
+			getTodos: function(url, data, token) {
+				header = "Authorization: JWT " + token; // so do we want header to be global or local?
+				return $http.get(url, {params:{"username": data}}, header);
+			},
+			createTodo: function(url, data, token) {
+				header = "Authorization: JWT " + token;
+				return $http.post(url, data, header);
+			},
+			editTodo: function(url, data, token) {
+				header = "Authorization: JWT " + token;
+				return $http.put(url, data, header);
+			},
+			deleteTodo: function(url, token) {
+				header = "Authorization: JWT " + token;
+				return $http.delete(url, token); //token or header???
+			}
+		};
+		return TodoAPIService;
+	});
