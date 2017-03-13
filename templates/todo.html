@@ -15,7 +15,7 @@
 				<form name="todoForm" ng-submit="submitForm()" novalidate>
 					<div class="form-group">
 						<label>Title</label>
-						<input type="text" name="title" class="form-control" ng-model="todo.title" required>
+						<input id="todo-title" type="text" name="title" class="form-control" ng-model="todo.title" required>
 						<p ng-show="todoForm.title.$pristine" class="help-block">A title is required</p>
 					</div>
 					<div class="form-group">
@@ -42,3 +42,9 @@
 </div>
 
 </div>
+
+<script>
+	$('#todo-modal').on('shown.bs.modal', function () {
+	  		$('#todo-title').focus();
+		});
+</script>
