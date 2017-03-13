@@ -29,7 +29,7 @@ This app uses JSON Web Tokens to authenticate users and keep them logged in. ALl
 	- Deleting todo items
 
 ### Features Left to Implement
-
+- all features implemented
 	
 
 
